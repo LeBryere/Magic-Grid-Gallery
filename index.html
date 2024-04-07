@@ -44,6 +44,14 @@
          });
       });
    });
+   document.addEventListener('click', (event) => {
+      if (!event.target.matches('img')) {
+         imgs.forEach(img => {
+            img.style.removeProperty('filter');
+            img.style.removeProperty('-webkit-filter');
+         });
+      }
+   });
 </script>
 
 </html>
