@@ -1,0 +1,83 @@
+:root {
+   --image-size: 120px;
+   --set-time: .25s;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100dvh;
+   display: grid;
+   place-items: center;
+   background-color: rgb(3, 3, 3);
+}
+
+main {
+   display: grid;
+   grid-template-columns: repeat(6, var(--image-size));
+   grid-template-rows: repeat(6, var(--image-size));
+   gap: .25rem;
+}
+
+img {
+   max-width: 100%;
+   aspect-ratio: 1;
+   object-fit: cover;
+   grid-column: span 2;
+   clip-path: path('M 100 20 C 120 -2 120 -2 140 20 C 240 120 140 20 220 100 C 240 120 240 120 220 140 C 120 240 220 140 140 220 C 120 240 120 240 98 220 C 20 140 98 220 20 140 C 0 120 0 120 20 100 C 100 20 0 120 100 20 Z');
+   border-radius: 0px;
+   transition:
+      filter var(--set-time) ease-out,
+      clip-path var(--set-time) ease-out;
+}
+
+img:hover {
+   clip-path: path('M 30 0 C 50 0 190 0 210 0 C 240 0 240 0 240 30 C 240 50 240 190 240 210 C 240 240 240 240 210 240 C 190 240 50 240 30 240 C 0 240 0 240 0 210 C 0 190 0 50 0 30 C 0 0 0 0 30 0 Z');
+   z-index: 100;
+}
+
+img:not(:hover) {
+   animation: z-hack var(--set-time);
+}
+
+@keyframes z-hack {
+
+   0%,
+   100% {
+      z-index: 10;
+   }
+}
+
+img:nth-of-type(4) {
+   grid-column: 2 / span 2;
+}
+
+@media screen and (min-width: 501px) and (max-width:700px) {
+   main {
+      grid-template-columns: repeat(4, var(--image-size));
+      grid-template-rows: repeat(6, var(--image-size));
+   }
+
+   img:nth-of-type(4) {
+      grid-column: 1 / span 2;
+   }
+
+   img:nth-of-type(3n) {
+      grid-column: 2 / span 2;
+   }
+}
+
+@media screen and (max-width:500px) {
+   main {
+      grid-template-columns: repeat(3, var(--image-size));
+      grid-template-rows: repeat(8, var(--image-size));
+   }
+
+   img:nth-of-type(2n) {
+      grid-column: 2 / span 2;
+   }
+}
