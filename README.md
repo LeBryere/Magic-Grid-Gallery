@@ -23,7 +23,7 @@
 
 The page presents a photo gallery, which is arranged as follows:
 
-The photos are placed within a main content element (<main class="content">).
+The photos are placed within a main content element ```html (<main class="content">)```.
 The photos are arranged according to their sources within img elements.
 When the mouse is hovered over a photo, the other photos blur and darken, while the current photo stands out.
 Styles are applied using JavaScript by listening for mouseenter and mouseleave events.
