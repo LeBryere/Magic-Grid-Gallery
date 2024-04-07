@@ -14,7 +14,7 @@
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://github.com/LeBryere/Magic-Grid-Gallery/.github.io/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://raw.githubusercontent.com/LeBryere/Magic-Grid-Gallery/master/LICENSE).
 
 ## Usage
 
@@ -40,4 +40,4 @@ The CSS code contains additional styles that influence the layout and appearance
 
 ## Copyright and License
 
-Copyright 2024 Lebryere. Code released under the[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://github.com/LeBryere/Magic-Grid-Gallery/.github.io/blob/master/LICENSE) license.
+Copyright 2024 Lebryere. Code released under the [![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://raw.githubusercontent.com/LeBryere/Magic-Grid-Gallery/master/LICENSE).
