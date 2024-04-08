@@ -10,8 +10,8 @@
 }
 
 body {
-   min-height: 100dvh;
    display: grid;
+   min-height: 100dvh;
    place-items: center;
    background-color: rgb(3, 3, 3);
 }
